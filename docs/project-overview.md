@@ -3,13 +3,40 @@
 ## Project Vision
 EQBrain is a modern, centralized platform for EverQuest (EQ) game information, specifically focusing on Time-Locked Progression (TLP) servers. The platform aims to aggregate and modernize information that is currently scattered across multiple outdated websites, providing a superior user experience for both new and veteran players.
 
+## Context and Motivation
+
+### EverQuest's Legacy
+EverQuest, launched in 1999, is one of the most influential MMORPGs in gaming history. Its complex gameplay mechanics, vast world, and challenging progression system have created a dedicated community that continues to thrive today.
+
+### The TLP Phenomenon
+One of the most significant trends keeping EQ vibrant is the popularity of "Time-Locked Progression" (TLP) servers. These servers:
+- Start with the game as it was in 1999
+- Progress through expansions at a set pace
+- Often include quality-of-life improvements
+- Maintain the classic EQ experience while adapting to modern gaming expectations
+
+### The Information Challenge
+EverQuest's depth creates a significant learning curve:
+- Hundreds of zones (regions, dungeons, playable areas)
+- Multiple playable races and classes
+- Thousands of items and equipment pieces
+- Hundreds of spells and abilities
+- Complex quest systems
+- Rich lore and world-building
+
+This information is currently scattered across multiple outdated websites, making it difficult for new players to:
+- Know what they don't know
+- Find accurate, up-to-date information
+- Navigate between different information sources
+- Understand server-specific variations
+
 ## Core Features
 
 ### 1. Data Aggregation
 - **Primary Sources**:
-  - EverQuest Allakhazam (https://everquest.allakhazam.com/)
-  - Project 1999 Wiki (https://wiki.project1999.com/)
-  - PQDI (https://www.pqdi.cc/) for Quarm-specific data
+  - EverQuest Allakhazam (https://everquest.allakhazam.com/) - One of the original EQ information sources, launched alongside the game in 1999
+  - Project 1999 Wiki (https://wiki.project1999.com/) - A popular source for TLP information, primarily user-submitted
+  - PQDI (https://www.pqdi.cc/) - Unique source for Quarm-specific data, including regular server data dumps
 - **Data Collection Method**:
   - Web scraping using Playwright
   - Rate-limited collection to respect source websites
@@ -28,9 +55,10 @@ EQBrain is a modern, centralized platform for EverQuest (EQ) game information, s
 - Server-specific variations tracking
 - Custom rules and modifications per server
 - Expansion-specific content filtering
+- Special focus on Quarm server variations
 
 ### 4. Community Features
-- Discord OAuth integration
+- Discord OAuth integration (leveraging existing Quarm community)
 - User-generated content
 - Community guides and updates
 - User comments and discussions
