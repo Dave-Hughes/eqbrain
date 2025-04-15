@@ -30,10 +30,25 @@ We believe that EverQuest's rich history and complex gameplay mechanics deserve 
 
 - **Frontend**: React with TypeScript and Tailwind CSS
 - **Backend**: Node.js/Express
-- **Database**: Supabase (PostgreSQL)
+- **Database**: Supabase (PostgreSQL) with Row Level Security
 - **Authentication**: Discord OAuth
 - **Data Collection**: Playwright for web scraping
 - **Architecture**: Monorepo structure for efficient development
+
+## 📊 Database Schema
+
+Our database is built on Supabase and currently includes:
+
+### Zones Table
+The `zones` table stores comprehensive information about EverQuest zones, including:
+- Basic information (name, short_name, level_range, expansion)
+- Zone details (type, instance type, key requirements)
+- Location data (safe and succor coordinates)
+- Gameplay mechanics (xp modifiers, binding rules)
+- Connected zones (stored as JSONB)
+- Timestamps for creation and updates
+
+The table is secured with Row Level Security (RLS) policies to ensure proper access control.
 
 ## 📚 Getting Started
 
