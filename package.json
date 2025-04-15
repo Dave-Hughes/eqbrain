@@ -1,0 +1,19 @@
+{
+  "name": "eqbrain",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start": "npm run start --workspace=frontend",
+    "start:backend": "npm run start --workspace=backend",
+    "dev": "concurrently \"npm run start\" \"npm run start:backend\"",
+    "build": "npm run build --workspace=frontend",
+    "test": "npm run test --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+} 
