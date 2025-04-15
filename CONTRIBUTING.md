@@ -6,14 +6,14 @@ Thank you for your interest in contributing to EQBrain! This document provides g
 
 EQBrain is a monorepo project consisting of two main components:
 - Frontend: React-based web application
-- Backend: Node.js/Express server with MongoDB
+- Backend: Node.js/Express server with Supabase
 
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
 - Node.js (v16 or higher)
 - npm (v7 or higher)
-- MongoDB (v6 or higher)
+- Supabase CLI (for local development)
 
 ## Getting Started
 
@@ -34,17 +34,23 @@ Before you begin, ensure you have the following installed:
 
    For backend (`backend/.env`):
    ```
-   MONGODB_URI=mongodb://localhost:27017/eqbrain
+   SUPABASE_URL=your_supabase_project_url
+   SUPABASE_ANON_KEY=your_supabase_anon_key
+   SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
    PORT=5000
    ```
 
    For frontend (`frontend/.env`):
    ```
    REACT_APP_API_URL=http://localhost:5000
+   REACT_APP_SUPABASE_URL=your_supabase_project_url
+   REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
    ```
 
-4. **Start MongoDB**
-   Ensure MongoDB is running locally on the default port (27017).
+4. **Database Setup**
+   - Ensure you have access to the Supabase project
+   - The database schema is managed through SQL migrations
+   - Run the necessary migrations to set up the database structure
 
 ## Development
 
@@ -112,9 +118,9 @@ eqbrain/
 1. **Port Conflicts**
    - If port 3000 or 5000 is in use, you can change them in the respective `.env` files
 
-2. **MongoDB Connection**
-   - Ensure MongoDB is running
-   - Check the connection string in `backend/.env`
+2. **Supabase Connection**
+   - Ensure your Supabase credentials are correctly set in the `.env` files
+   - Verify that your IP address is allowed in Supabase's network settings
 
 3. **Dependency Issues**
    - Try deleting `node_modules` and running `npm install` again
